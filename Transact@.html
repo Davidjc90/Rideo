@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Transactional</title>
+     <style>
+          body{
+               margin:0;
+               background-color: #ccc;
+               font-family: Arial, Helvetica, sans-serif , Roboto;
+          }
+          table{
+               border-spacing:0;
+          }
+          td{
+               padding: 0;
+          }
+          img{
+               border: 0;
+          }
+          .container{
+               width: 100%;
+               table-layout: fixed;
+          }
+          .main{
+               width: 100%;
+               max-width: 600px;
+               margin: 0 auto;
+               color: #060606;
+              background-color:#ffffff;
+              
+          }
+          .header-banner{
+               background-color: #276EF1;
+               color: #ffffff;
+               padding: 20px 40px 20px 40px;
+               background-image: url(https://i.ibb.co/vHTCvH5/bg.png);
+               background-size: cover;
+               background-position: center;
+          }
+          .payment{
+               display: flex;
+              flex-direction: row;
+              align-items: center;
+              font-size: 0;
+          }
+          .sub-detail{
+               font-size: 0;
+          }
+          .sub{
+               font-size: 0;
+          }
+          .amount-charged{
+
+          }
+          .receipt-body{
+               padding: 20px 40px 20px 40px;
+          }
+          .receipt-details{
+               padding: 20px 40px 20px 40px;
+               background-color: #f5f5f5;
+          }
+          .receipt-body-hr-blue{
+               border-bottom: 1px solid #276EF1;
+               padding-bottom: 15px;
+          }
+          .receipt-body-hr-gray{
+               border-bottom: 1px solid #ccc;
+               padding-bottom: 15px;
+               padding-top: 5px;
+          }
+          .heading-logo{
+               font-size: 0;
+          }
+          .paragraph-logo{
+               font-size: 0;
+          }
+          .receipt-recomend{
+               padding: 20px 35px 20px 35px;
+               
+          }
+          
+          .button{
+               background-color: #276EF1;
+               text-transform: uppercase;
+               font-weight: 700;
+               padding: 10px 14px 10px 14px;
+               border: none;
+          }
+          .links{
+               padding: 5px 35px 5px 35px;
+               background-color: #276EF1;
+               
+          }
+          .links-list{
+               padding: 0;
+          }
+          .footer{
+               padding: 20px 40px 20px 40px;
+               background-color: #060606;
+               color: #ffffff;
+          }
+          .badge{
+               border-radius: 50%;
+          }
+
+          /*Media Queries*/
+         @media screen and (max-width:470px) {
+           .receipt-item{
+               display: block ;
+               width: 100% ;
+               max-width: 100%;
+               direction: ltr ;
+               padding-bottom: 5px;
+           }
+           .invite{
+               display: block ;
+               width: 100% ;
+               max-width: 100%;
+           }
+           .badge{
+               padding-bottom: 15px;
+           }
+           .links-list-item{
+               display: block;
+               width:100%;
+               max-width: 100%;
+               text-align: left;
+           }
+           .footer-column{
+               display: block;
+               width: 100%;
+               max-width: 100%;
+               direction: ltr;
+               padding-bottom: 15px;
+           }
+           .header-banner{
+               padding: 20px 20px 20px 20px !important;
+           }
+           .receipt-body {
+              padding: 20px 20px 20px 20px !important;
+            }
+            .receipt-details {
+              padding: 20px 20px 20px 20px !important;
+              background-color: #f5f5f5;
+            }
+            .receipt-recomend {
+              padding: 20px 15px 20px 15px !important;
+           }
+           .recomend-container{
+               padding: 10px !important;
+           }
+           .links {
+             padding: 6px 20px 5px 20px !important;
+           }
+           .footer{
+               padding: 20px 20px 20px 20px !important;
+           }
+           
+         }
+
+          
+     </style>
+</head>
+<body>
+
+     <center class="container"> 
+        <table class="main">
+          <!--heading-->
+          <tr>
+               <td width="100%" align="center" class="header-banner">
+                 <table width="100%" cellspacing="0" cellpadding="0" role="presentation" border="0">
+                   <tr>
+                    <td align="left"> 
+                        <img src="https://i.ibb.co/Jrn6kqW/Rideo.png" width="90px" style="max-width: 100%;" alt="logo">
+                    </td>
+                    <td align="right"> 
+                         <p class="paragraph-logo" style="font-size: 12px;">
+                              Total: <span style="font-weight:bold;">$5.75</span> <br>
+                              Mon, Dec 31, 2023
+ 
+                         </p>
+                     </td>
+                   </tr>
+                 </table>
+                 <table width="100%" cellspacing="0" cellpadding="0" role="presentation" border="0">
+                    <tr>
+                         <td align="left">
+                             <h1>
+                                Thanks for riding , <br> Drake William
+                             </h1>
+                              <p>
+                                   We hope you enjoyed your <br> ride this morning.
+                               </p>
+                         </td>
+                     </tr>
+                 </table>
+             </td>  
+          </tr>
+          <!--heading-->
+          
+          <!--Body Receipt details-->
+          <tr>
+               <td width="100%" class="receipt-body">
+                  <table width="100%" cellspacing="0" cellpadding="0" role="presentation" border="0" class="receipt-body-hr-blue">
+                    <tr>
+                         <td width="50%" align="left">
+                             <h1>Total</h1>
+                         </td>
+                         <td width="50%" align="right">
+                              <h1>$5.75</h1>
+                          </td>
+                    </tr>
+                  </table>
+                  <table width="100%" cellspacing="0" cellpadding="0" role="presentation" border="0" class="receipt-body-hr-gray">
+                    <tr>
+                         <td width="50%" align="left">
+                             <p>Trip Fare</p>
+                         </td>
+                         <td width="50%" align="right">
+                              <p>$3.25</p>
+                          </td>
+                    </tr>
+                  </table>
+                  <table width="100%" cellspacing="0" cellpadding="0" role="presentation" border="0" class="receipt-body-hr-gray">
+                    <tr>
+                         <td width="50%" align="left">
+                             <p class="sub-detail" style="font-size: 14px; line-height:14px; font-weight: 700;">Subtotal</p>
+                             <p class="sub" style="font-size: 14px; line-height:14px;">Tolls, Surcharges, and Fees <a href="#">
+                              <img src="https://i.ibb.co/WtzKMWb/icon.png" width="15px" class="icon"></a></p>
+                         </td>
+                         <td width="50%" align="right">
+                              <p>$3.25</p>
+                              <p>$3.25</p>
+                          </td>
+                    </tr>
+                  </table>
+                  <table width="100%" cellspacing="0" cellpadding="0" role="presentation" border="0" class="amount-charged">
+                    <tr>
+                         <td width="50%" align="left">
+                             <p class="payment" style="font-size: 13px; line-height: 13px;"> 
+                              <img src="https://i.ibb.co/rZMkWJc/mastercard.png" width="30px" height="20px" class="icon">
+                               &nbsp; •••• 6500 | <a href="#" style="text-decoration: none;">Switch</a></p>
+                         </td>
+                         <td width="50%" align="right">
+                              <p>$8.75</p>
+                          </td>
+                    </tr>
+                  </table>
+                  <table width="100%"cellspacing="0" cellpadding="0" role="presentation" border="0" >
+                    <tr>
+                         <td width="100%">
+                              <p style="font-size: 12px; line-height: 20px;">A temporary hold of $5.75 was placed on your payment method •••• 6500 at the start of the trip. 
+                              This is not a charge and has or will be removed. 
+                              It should disappear from your bank statement shortly. 
+                              <span><a href="#">Learn More</a></span></p>
+
+                              <p style="font-size: 16px; line-height: 20px;">
+                                  <a href="#"> Download PDF</a> <br>
+                                  <span style="font-size: 12px; line-height: 16px;">Download link expires 1/31/24</span>
+                              </p>
+                              
+                         </td>
+                    </tr>
+                  </table>
+               </td>
+          </tr>
+          <!--Body Receipt details-->
+
+          <!--Rate Driver-->
+          <tr>
+               <td width="100%" class="receipt-details">
+                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" border="0" class="receipt-header">
+                         <tr>
+                              <td width="100%">
+                                <h4>You rode with Smith David</h4>
+                              </td>
+                         </tr>
+                    </table>
+                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" border="0" style="padding-top: 15px; padding-bottom: 15px;">
+                         <tr valign="middle">
+                              <td width="200" align="left" valign='center' class="receipt-item" >
+                                  <img src="https://i.ibb.co/frpyyxg/badge-excelent-service.jpg" width="70px" style="max-width: 100%;" class="badge">
+                              </td>
+                              <td width="200" align="left"  valign='center'  class="receipt-item">
+                                   <span>4.88 <img src="https://i.ibb.co/JFmJNy0/STAR.png" alt=""> Rating</span>
+                                   <p style="font-size: 12px; line-height: 12px;"> <span>Driver Compliment: <br><br>
+                                   </span></p>
+                                   <p style="font-size: 12px; line-height: 12px;">"Excellent Service"</p>
+                               </td>
+                               <td width="200" align="left" valign='top'   class="receipt-item">
+                                   <p style="font-size: 14px; line-height: 16px;">How was your Ride?</p>
+                                   <button class="button">
+                                        <a href="#" style="text-decoration: none; color: #ffffff;">Rate or Tip</a> 
+                                         <img src="https://i.ibb.co/418qGhZ/arrow-right.png" width="12px" style="padding-left: 5px;" alt="">
+                                   </button>
+                               </td> 
+                         </tr>
+                     </table>
+                     <table width="100%" cellspacing="0" cellpadding="0"  border='0' role="presentation" style="padding-top: 15px; padding-bottom: 15px;">
+                         <tr>
+                              <td width="100%">
+                                <p style="font-size: 10px; line-height: 12px;">Booking Service Provider: SCE LLC</p>
+                                <p style="font-size: 10px; line-height: 12px;">Vehicle Registration: UDR-0563</p>
+                                <p style="font-size: 10px; line-height: 12px;">Driver Accreditation Number: 901567</p>
+                              </td>
+                         </tr>
+                     </table>
+               </td>
+          </tr>
+          <!--Rate Driver-->
+
+          <!--Share info-->
+          <tr>
+               <td width="100%" align="center" class="receipt-recomend">
+                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" border="0" >
+                         <tr>
+                              <td width="100%">
+                                <table width="100%"style="background-color: #f5f5f5;  padding: 15px;" class="recomend-container">
+                                   <td width="150" class="invite">
+                                        <img src="https://i.ibb.co/QcBMDTP/gifted.png" width="100px" style="max-width: 100%;" alt="gift">
+                                     </td>
+                                     <td width="450"  class="invite">
+                                          <p>Invite your friends and family.</p>
+                                          <p>Get a free ride worth up to $5 when you refer a <br>
+                                           friend to try Rideo. Share code: R1D3056$</p>
+                                       </td>
+                                </table>
+                              </td>
+                         </tr>
+                    </table>
+               </td>
+          </tr>
+          <!--Share info-->
+
+          <!--Links-->
+          <tr>
+               <td width="100%">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation" class="links">
+                        <tr>
+                         <td width="200" valign="center"  align='center' class="links-list-item">
+                            <p style="font-size: 14px; line-height: 16px; font-weight: 700; text-transform: uppercase;">
+                              <a href="#" style="color: #ffffff; text-decoration: none;">Report Lost Item</a> 
+                            </p>
+                         </td>
+                         <td width="200" valign="center"  align='center' class="links-list-item">
+                              <p style="font-size: 14px; line-height: 16px; font-weight: 700; text-transform: uppercase;">
+                                <a href="#" style="color: #ffffff; text-decoration: none;">Contact Support</a>
+                              </p>
+                           </td>
+                           <td width="200" valign="center"   align='center' class="links-list-item">
+                              <p style="font-size: 14px; line-height: 16px; font-weight: 700; text-transform: uppercase;">
+                                <a href="#" style="color: #ffffff; text-decoration: none;">My Trips </a>
+                              </p>
+                           </td>
+                        </tr>
+                    </table>
+               </td>
+          </tr>
+          <!--Links-->
+
+          <!--Footer-->
+          <tr>
+               <td width="100%"  class="footer">
+                  <table  width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation">
+                      <tr>
+                         <td width="100%" align="left" style="border-bottom: 0.2px solid #282727;">
+                              <img src="https://i.ibb.co/Jrn6kqW/Rideo.png" width="90px" heigth="90px" style="max-width: 100%; padding-top:15px; padding-bottom: 15px;" alt="logo">
+                         </td>
+                      </tr>       
+                  </table>
+
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation" 
+                  style="padding-top: 15px;">
+                    <!--Left-->
+                    <tr>
+                         <td align="left" width="300" valign="top" class="footer-column" style="padding-right: 15px;" >
+                              <p class="footer-paragraph"
+                              style="font-size: 14px; line-height:14px; font-weight: 700;">FAQ</p>  
+                               <p class="footer-paragraph"
+                               style="font-size: 14px; line-height:14px; font-weight: 700;">Forgot password</p>
+                         </td>
+                         <td align="left" width="300" valign="top" class="footer-column" style="padding-right: 15px;" >
+                              <p class="footer-paragraph-alt"
+                                 style="font-size: 12px; line-height: 22px; color: #828181;"
+                               > Rideo LLC.<br>
+                               2109 Palmdale Street <br>
+                               San Francisco  CA</p>
+                              <p style="font-size: 12px; line-height: 14px; padding-top: 5px;">Privacy</p>
+                              <p style="font-size: 12px; line-height: 14px; padding-top: 5px;">Terms</p>
+                         </td>
+                    </tr>
+                    <!--Left-->  
+                  </table>
+               </td>
+          </tr>
+          <!--Footer-->
+
+
+        </table>
+     </center>  
+</body>
+</html>
